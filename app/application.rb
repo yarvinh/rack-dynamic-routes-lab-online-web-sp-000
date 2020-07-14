@@ -3,8 +3,8 @@ class   Application
       def call(env)
         resp = Rack::Response.new
         req = Rack::Request.new(env)
-      p  items = req.path.split("/").reject {|e| e == ""}
-        selected_items = @@items.select{|item| items[1] == item.name}
+        items = req.path.split("/").reject {|e| e == ""}
+      p  selected_items = @@items.select{|item| items[1] == item.name}
         if req.path =='/testing'
            resp.status = 404
            resp.write  "Route not found"
