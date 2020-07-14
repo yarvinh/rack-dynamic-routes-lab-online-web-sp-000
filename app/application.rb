@@ -12,17 +12,18 @@ class   Application
        resp.write  "Route not found"
       else
         error = nil
-       @@items.map{|item| 
+       @@items.map{|item|
          if items[1] == item.name
           resp.write   "#{item.price}"
-          p resp.status
+          error = resp.status
         else
            resp.write "Item not found"
            error = resp.status = 400
          end
        }
+       p error
 
-         error
+
 
      end
         #  if req.path=="/songs"
