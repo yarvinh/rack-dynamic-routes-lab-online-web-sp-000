@@ -2,10 +2,10 @@ class   Application
 
       def call(env)
         resp = Rack::Response.new
-         req = Rack::Request.new(env)
+        req = Rack::Request.new(env)
 
         #  p @@items
-          p "testing params" ,req.path
+      p "testing params" ,req.path
       if req.path =='/testing'
        resp.status = 404
       p  req.path
