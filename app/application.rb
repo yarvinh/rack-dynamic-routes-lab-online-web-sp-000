@@ -5,17 +5,36 @@ class   Application
         req = Rack::Request.new(env)
 
       items = req.path.split("/").reject {|e| e == ""}
-      select_items = @@items.select{|item| items[1] == item.name }
+
       if req.path =='/testing'
        resp.status = 404
 
        resp.write  "Route not found"
-     elsif select_items.empty?
-       p resp.status
-       resp.write "Item not found"
-     end
+      else
+        error = nil
+       @@items.select{|item|
+         if items[1] == item.name
+          resp.write   "#{item.price}"
+        p  error = resp.status = 200
+        else
+           resp.write "Item not found"
+        # p   error = resp.status = 400
+         end
+       }
+      #  p error
 
+
+
+     end
+        #  if req.path=="/songs"
+        # #   resp.write "You requested the songs"
+        # # else
+        # #   resp.write "Route not found"
+        #    p @@items
+        # end
+        #
          resp.finish
+      # end
     end
 end
 # class Application
