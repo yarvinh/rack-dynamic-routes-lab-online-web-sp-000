@@ -14,7 +14,7 @@ class   Application
          resp.status = 400
          resp.write "Item not found"
        elsif !@@items.select{|item| items[1] == item.name}.empty?
-        p @@items.select{|item| items[1] == item.name}.each{|item| resp.write item.price}
+         @@items.select{|item| items[1] == item.name}.each{|item| resp.write item.price}
      end
          resp.finish
 
