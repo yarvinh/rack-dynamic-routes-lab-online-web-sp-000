@@ -11,7 +11,7 @@ class   Application
       p  req.path
        resp.write  "Route not found"
      elsif req.path == '/items/Figs' || req.path == "/items/Apples"
-       p "mjmnmmkmk"
+       @@items.each{|item| p item.name}
 
      end
         #  if req.path=="/songs"
