@@ -15,10 +15,10 @@ class   Application
        @@items.map{|item|
          if items[1] == item.name
           resp.write   "#{item.price}"
-          error = resp.status
+        p  error = resp.status
         else
            resp.write "Item not found"
-           error = resp.status = 400
+        p   error = resp.status = 400
          end
        }
        p error
