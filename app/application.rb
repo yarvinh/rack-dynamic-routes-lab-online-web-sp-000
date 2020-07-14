@@ -11,17 +11,10 @@ class   Application
 
        resp.write  "Route not found"
       else
-        error = nil
-       @@items.map{|item|
-         if items[1] == item.name
-          resp.write   "#{item.price}"
-        p  error = resp.status = 200
-        else
-           resp.write "Item not found"
-        # p   error = resp.status = 400
-         end
-       }
-      #  p error
+
+       select_items = @@items.select{|item| items[1] == item.name }
+       p select_items
+
 
 
 
