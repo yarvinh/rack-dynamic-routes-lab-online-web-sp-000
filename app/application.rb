@@ -11,7 +11,7 @@ class   Application
 
        resp.write  "Route not found"
       else
-      p  resp.status
+      
        @@items.each{|item|
          error = nil
          if items[1] == item.name
