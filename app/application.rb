@@ -6,7 +6,7 @@ class   Application
 
       items = req.path.split("/").reject {|e| e == ""}
       #  selected_items =  @@items.select{|item| items[1] == item.name}
-    
+
       if req.path =='/testing'
        resp.status = 404
        resp.write  "Route not found"
