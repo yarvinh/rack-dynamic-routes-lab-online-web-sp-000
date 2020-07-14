@@ -3,20 +3,21 @@ class   Application
       def call(env)
         resp = Rack::Response.new
         req = Rack::Request.new(env)
-        items = req.path.split("/").reject {|e| e == ""}
-      p  selected_items = @@items.select{|item| items[1] == item.name}
-        if req.path =='/testing'
-           resp.status = 404
-           resp.write  "Route not found"
 
-        elsif selected_items.empty?
-           resp.write "Item not found"
-        end
+      items = req.path.split("/").reject {|e| e == ""}
+      select_items = @@items.select{|item| items[1] == item.name }
+      if req.path =='/testing'
+       resp.status = 404
 
+       resp.write  "Route not found"
+     elsif select_items.empty?
+       p resp.status
+       resp.write "Item not found"
+     end
+
+         resp.finish
     end
-    resp.finish
 end
-
 # class Application
 #
 #   @@items = ["Apples","Carrots","Pears"]
