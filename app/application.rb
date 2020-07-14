@@ -18,7 +18,7 @@ class   Application
         p  error = resp.status = 200
         else
            resp.write "Item not found"
-        p   error = resp.status = 400
+        # p   error = resp.status = 400
          end
        }
       #  p error
