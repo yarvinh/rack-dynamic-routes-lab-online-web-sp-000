@@ -23,7 +23,7 @@ class   Application
          end
        }
 
-         error
+        p error
 
      end
         #  if req.path=="/songs"
