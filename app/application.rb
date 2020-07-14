@@ -4,10 +4,11 @@ class   Application
         resp = Rack::Response.new
          req = Rack::Request.new(env)
 
-         p @@items
+        #  p @@items
          p "testing req" ,req.path
       if req.path =='/testing'
        resp.status = 404
+      p  req.path
        resp.write  "Route not found"
      elsif @@items.include?(req.path['/items'])
           p "jijjikjmjmmnjknknjnnnnjknnnnjnnnnjnjnjnkjfbnkjnbkjvbnkjdfsfbnjmfbnvmdzbmjvbdfcsjdkzvbkjdfstzbhvkjdsfzbcvjbdfzvkhjdezbvdchjvbDZJHcbvjhsaDNMvcjhsmVgjhcmzsvJHcbvsUDHKJDbvc naSMVcnmdVDghjcbnbvasdjhbvfhmansDVfhgmabewr hcjbvsdbvchmJSdvxbchjds kuyj,cbv sdmnxbvcnsdbcvuBSDchjbsdc zbsfcj fcjkbv jkhdkv"
