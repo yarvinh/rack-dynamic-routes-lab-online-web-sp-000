@@ -13,8 +13,8 @@ class   Application
            resp.write "Item not found"
         end
 
-        resp.finish
     end
+    resp.finish
 end
 
 # class Application
