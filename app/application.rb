@@ -13,7 +13,7 @@ class   Application
       else
        @@items.each{|item| p
          if items[1] == item.name
-         p   item.price
+          resp.write   item.price
          end
        }
 
