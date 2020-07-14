@@ -15,7 +15,7 @@ class   Application
        @@items.each{|item| p error
          if items[1] == item.name
           resp.write   "#{item.price}"
-          error = resp.status
+          p resp.status
         else
            resp.write "Item not found"
            error = resp.status = 400
