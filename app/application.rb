@@ -11,9 +11,8 @@ class   Application
        resp.status = 404
        resp.write  "Route not found"
        elsif @@items.select{|item| items[1] == item.name}.empty?
-
          resp.status = 400
-         resp.write
+         resp.write "Item not found"
      end
          resp.finish
 
