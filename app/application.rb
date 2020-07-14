@@ -5,7 +5,7 @@ class   Application
         req = Rack::Request.new(env)
 
       items = req.path.split("/").reject {|e| e == ""}
-
+       p items
       if req.path =='/testing'
        resp.status = 404
       p  req.path
