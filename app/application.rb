@@ -4,7 +4,7 @@ class   Application
         resp = Rack::Response.new
         req = Rack::Request.new(env)
 
-      p "testing params" ,req.path.join
+      p "testing params" ,req.path.split("/")
       if req.path =='/testing'
        resp.status = 404
       p  req.path
