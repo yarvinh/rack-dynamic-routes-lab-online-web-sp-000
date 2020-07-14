@@ -11,7 +11,7 @@ class   Application
 
        resp.write  "Route not found"
      elsif select_items.empty?
-       resp.status = 400
+       p resp.status
        resp.write "Item not found"
      end
         #  if req.path=="/songs"
