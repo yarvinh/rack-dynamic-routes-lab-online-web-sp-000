@@ -3,7 +3,7 @@ class   Application
       def call(env)
         resp = Rack::Response.new
         req = Rack::Request.new(env)
-
+   p @@items
       items = req.path.split("/").reject {|e| e == ""}
       selected_items = @@items.select{|item| items[1] == item.name }
       if req.path =='/testing'
