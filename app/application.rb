@@ -13,7 +13,7 @@ class   Application
       else
        @@items.each{|item| p
          if items[1] == item.name
-          resp.write   item.price
+          resp.write   "#{item.price}"
         else
           resp.status = 400
           resp.write "Item not found"
