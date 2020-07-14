@@ -10,14 +10,14 @@ class   Application
        resp.status = 404
 
        resp.write  "Route not found"
-       resp.finish
+    
      elsif select_items.empty?
        p resp.status
        resp.write "Item not found"
-       resp.finish
+
      end
 
-
+      resp.finish
     end
 end
 # class Application
