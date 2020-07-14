@@ -21,7 +21,7 @@ class   Application
         p   error = resp.status = 400
          end
        }
-       p error
+      #  p error
 
 
 
