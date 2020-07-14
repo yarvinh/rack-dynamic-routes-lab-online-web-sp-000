@@ -10,7 +10,7 @@ class   Application
       if req.path =='/testing'
        resp.status = 404
        resp.write  "Route not found"
-      elsif selected_items.empty?
+      # elsif selected_items.empty?
 
     #      resp.status = 400
     #      resp.write
