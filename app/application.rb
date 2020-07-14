@@ -10,19 +10,14 @@ class   Application
        resp.status = 404
 
        resp.write  "Route not found"
+       resp.finish
      elsif select_items.empty?
        p resp.status
        resp.write "Item not found"
+       resp.finish
      end
-        #  if req.path=="/songs"
-        # #   resp.write "You requested the songs"
-        # # else
-        # #   resp.write "Route not found"
-        #    p @@items
-        # end
-        #
-         resp.finish
-      # end
+
+
     end
 end
 # class Application
