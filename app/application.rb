@@ -4,7 +4,6 @@ class   Application
         resp = Rack::Response.new
         req = Rack::Request.new(env)
 
-        #  p @@items
       p "testing params" ,req.path
       if req.path =='/testing'
        resp.status = 404
