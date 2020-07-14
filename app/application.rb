@@ -5,13 +5,13 @@ class   Application
          req = Rack::Request.new(env)
 
         #  p @@items
-          p "testing params" ,req.params
+          p "testing params" ,req.params['items']
       if req.path =='/testing'
        resp.status = 404
       p  req.path
        resp.write  "Route not found"
      elsif @@items.include?(req.path['/items'])
-          p "jijjikjmjmmnjknknjnnnnjknnnnjnnnnjnjnjnkjfbnkjnbkjvbnkjdfsfbnjmfbnvmdzbmjvbdfcsjdkzvbkjdfstzbhvkjdsfzbcvjbdfzvkhjdezbvdchjvbDZJHcbvjhsaDNMvcjhsmVgjhcmzsvJHcbvsUDHKJDbvc naSMVcnmdVDghjcbnbvasdjhbvfhmansDVfhgmabewr hcjbvsdbvchmJSdvxbchjds kuyj,cbv sdmnxbvcnsdbcvuBSDchjbsdc zbsfcj fcjkbv jkhdkv"
+        
      end
         #  if req.path=="/songs"
         # #   resp.write "You requested the songs"
