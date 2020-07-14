@@ -11,17 +11,19 @@ class   Application
 
        resp.write  "Route not found"
       else
+        error = nil
        @@items.each{|item| p
          if items[1] == item.name
           resp.write   "#{item.price}"
+          error = resp.status
         else
           # resp.status = 400
            resp.write "Item not found"
-          resp.status = 400
+           error = resp.status = 400
          end
        }
 
-
+         error
 
      end
         #  if req.path=="/songs"
