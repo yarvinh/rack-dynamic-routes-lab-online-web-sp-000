@@ -13,6 +13,8 @@ class   Application
        elsif @@items.select{|item| items[1] == item.name}.empty?
          resp.status = 400
          resp.write "Item not found"
+       elsif !@@items.select{|item| items[1] == item.name}.empty?
+        p @@items.select{|item| items[1] == item.name}
      end
          resp.finish
 
