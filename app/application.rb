@@ -10,8 +10,9 @@ class   Application
        resp.status = 404
       p  req.path
        resp.write  "Route not found"
-     elsif @@items.include?(req.path['/items'])
-        
+     elsif req.path == '/items'
+       p "mjmnmmkmk"
+
      end
         #  if req.path=="/songs"
         # #   resp.write "You requested the songs"
