@@ -11,7 +11,7 @@ class   Application
 
        resp.write  "Route not found"
       else
-
+        error = nil
        @@items.each{|item|
          if items[1] == item.name
           resp.write   "#{item.price}"
