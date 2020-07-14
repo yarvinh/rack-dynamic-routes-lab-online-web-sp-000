@@ -5,14 +5,14 @@ class   Application
         req = Rack::Request.new(env)
 
       items = req.path.split("/").reject {|e| e == ""}
-        selected_items =  @@items.select{|item| items[1] == item.name}
+      selected_items =  @@items.select{|item| items[1] == item.name}
 
       if req.path =='/testing'
        resp.status = 404
        resp.write  "Route not found"
-     elsif selected_items.empty?
-         resp.status = 400
-         resp.write
+    #  elsif selected_items.empty?
+    #      resp.status = 400
+    #      resp.write
      end
          resp.finish
 
