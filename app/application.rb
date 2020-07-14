@@ -15,8 +15,8 @@ class   Application
          if items[1] == item.name
           resp.write   "#{item.price}"
         else
-          resp.status = 400
-          resp.write "Item not found"
+          # resp.status = 400
+          # resp.write "Item not found"
          end
        }
 
