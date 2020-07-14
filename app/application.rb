@@ -9,7 +9,7 @@ class   Application
       if req.path =='/testing'
        resp.status = 404
        resp.write  "Route not found"
-     elsif @@items.include?(req.path['items'])
+     elsif @@items.include?(req.path['/items'])
           p "jijjikjmjmmnjknknjnnnnjknnnnjnnnnjnjnjnkjfbnkjnbkjvbnkjdfsfbnjmfbnvmdzbmjvbdfcsjdkzvbkjdfstzbhvkjdsfzbcvjbdfzvkhjdezbvdchjvbDZJHcbvjhsaDNMvcjhsmVgjhcmzsvJHcbvsUDHKJDbvc naSMVcnmdVDghjcbnbvasdjhbvfhmansDVfhgmabewr hcjbvsdbvchmJSdvxbchjds kuyj,cbv sdmnxbvcnsdbcvuBSDchjbsdc zbsfcj fcjkbv jkhdkv"
      end
         #  if req.path=="/songs"
