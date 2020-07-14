@@ -10,8 +10,14 @@ class   Application
        resp.status = 404
       p  req.path
        resp.write  "Route not found"
-     elsif req.path == '/items/Figs' || req.path == "/items/Apples"
-       @@items.each{|item| p item.name}
+      else
+       @@items.each{|item| p
+         if items[1] == item.name
+         p   item.price
+         end
+       }
+
+
 
      end
         #  if req.path=="/songs"
