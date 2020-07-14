@@ -10,7 +10,7 @@ class   Application
        resp.status = 404
       p  req.path
        resp.write  "Route not found"
-     elsif req.path == '/items/Figs'
+     elsif req.path == '/items/Figs' || req.path == "/items/Apples"
        p "mjmnmmkmk"
 
      end
